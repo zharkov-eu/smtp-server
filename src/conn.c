@@ -210,8 +210,8 @@ int conn_update()
 conn_t *conn_create()
 {
     conn_t *conn = malloc(sizeof(conn_t));
-    conn->send_buf = calloc(SEND_BUF_SIZE + 2, sizeof(char));
-    conn->recv_buf = calloc(RECV_BUF_SIZE + 2, sizeof(char));
+    conn->send_buf = calloc(SEND_BUF_SIZE + 1, sizeof(char));
+    conn->recv_buf = calloc(RECV_BUF_SIZE + 1, sizeof(char));
     return conn;
 }
 
